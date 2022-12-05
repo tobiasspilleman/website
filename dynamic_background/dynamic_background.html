@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dynamicBackground"></div>
+</body>
+<script>
+    var dynamicBackground = document.getElementById("dynamicBackground");
+    var containerWidth;
+    var containerHeight;
+
+    //Initialising when Script is called
+    getDynamics();
+    rendenderCluster()
+
+    // Gets dynamics of dynamicBackground Container
+    function getDynamics(){
+        containerHeight = dynamicBackground.clientWidth;
+        containerWidth = dynamicBackground.clientWidth;
+    }
+
+    //Renders the Cluster
+    rendenderCluster();
+    function rendenderCluster(){
+        dynamicBackground.innerHTML = `<div id="animationBox"></div>`;
+        
+    }
+    dynamicBackground.innerHTML = `Width: ${containerWidth}..`;
+    
+
+
+</script>
+</html>
